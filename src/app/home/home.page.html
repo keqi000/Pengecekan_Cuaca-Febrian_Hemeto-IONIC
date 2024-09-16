@@ -1,0 +1,131 @@
+<ion-content [ngClass]="getBackgroundClass()">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Weather App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <p id="Pembuat">By: Febrian Hemeto</p>
+    <div class="search-container">
+      <ion-item class="custom-search">
+        <ion-label class="custom-label">Enter City</ion-label>
+        <ion-input
+          [(ngModel)]="inputCity"
+          placeholder="City name"
+          class="custom-input"
+        ></ion-input>
+      </ion-item>
+      <ion-button (click)="searchCity()">Search</ion-button>
+    </div>
+
+    <ion-item *ngIf="errorMessage" lines="none">
+      <p style="color: red">{{ errorMessage }}</p>
+    </ion-item>
+
+    <ion-card *ngIf="weatherData">
+      <ion-card-header>
+        <ion-card-title>{{ city }} Weather</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Weather Icon -->
+        <img
+          [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'"
+          alt="Weather Icon"
+        />
+        <img
+          [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'"
+          alt="Weather Icon"
+        />
+        <img
+          [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'"
+          alt="Weather Icon"
+        />
+        <ion-list class="custom-list">
+          <!-- Weather Description -->
+          <ion-item>
+            <ion-icon name="cloud-outline" slot="start"></ion-icon>
+            <ion-label
+              >Weather: {{ weatherData.weather[0].description }}</ion-label
+            >
+          </ion-item>
+
+          <!-- Weather Conditions -->
+          <ion-item
+            *ngIf="weatherData.weather[0].description.includes('clear')"
+          >
+            <ion-label
+              >Clear skies mean no significant weather disturbances. Enjoy the
+              sunshine!</ion-label
+            >
+          </ion-item>
+          <ion-item
+            *ngIf="weatherData.weather[0].description.includes('cloud')"
+          >
+            <ion-label
+              >Cloudy weather might bring some overcast conditions but generally
+              good visibility.</ion-label
+            >
+          </ion-item>
+          <ion-item *ngIf="weatherData.weather[0].description.includes('rain')">
+            <ion-label
+              >Rainy weather, expect wet conditions. Carry an umbrella or
+              raincoat.</ion-label
+            >
+          </ion-item>
+
+          <!-- Temperature -->
+          <ion-item>
+            <ion-icon name="thermometer-outline" slot="start"></ion-icon>
+            <ion-label>Temperature: {{ weatherData.main.temp }} °C</ion-label>
+          </ion-item>
+
+          <!-- Feels Like -->
+          <ion-item>
+            <ion-icon name="sunny-outline" slot="start"></ion-icon>
+            <ion-label
+              >Feels Like: {{ weatherData.main.feels_like }} °C</ion-label
+            >
+          </ion-item>
+
+          <!-- Humidity -->
+          <ion-item>
+            <ion-icon name="water-outline" slot="start"></ion-icon>
+            <ion-label>Humidity: {{ weatherData.main.humidity }} %</ion-label>
+          </ion-item>
+
+          <!-- Pressure -->
+          <ion-item>
+            <ion-icon name="speedometer-outline" slot="start"></ion-icon>
+            <ion-label>Pressure: {{ weatherData.main.pressure }} hPa</ion-label>
+          </ion-item>
+
+          <!-- Wind Speed -->
+          <ion-item>
+            <ion-icon name="leaf-outline" slot="start"></ion-icon>
+            <ion-label>Wind Speed: {{ weatherData.wind.speed }} m/s</ion-label>
+          </ion-item>
+
+          <!-- Wind Direction -->
+          <ion-item>
+            <ion-icon name="compass-outline" slot="start"></ion-icon>
+            <ion-label>Wind Direction: {{ weatherData.wind.deg }}°</ion-label>
+          </ion-item>
+
+          <!-- Min and Max Temperature -->
+          <ion-item>
+            <ion-icon name="snow-outline" slot="start"></ion-icon>
+            <ion-label
+              >Min Temperature: {{ weatherData.main.temp_min }} °C</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-icon name="thermometer-outline" slot="start"></ion-icon>
+            <ion-label
+              >Max Temperature: {{ weatherData.main.temp_max }} °C</ion-label
+            >
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

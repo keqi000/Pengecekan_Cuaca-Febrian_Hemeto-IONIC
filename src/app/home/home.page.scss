@@ -1,0 +1,144 @@
+ion-content {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --overflow: auto;
+  --overflow-y: auto;
+  --ion-text-color: white;
+
+  &.clear-sky {
+    --background: url("../../assets/clear_sky.jpg") no-repeat center center /
+      cover;
+  }
+
+  &.cloudy-sky {
+    --background: url("../../assets/cloudy_sky.jpeg") no-repeat center center /
+      cover;
+  }
+
+  &.rainy-sky {
+    --background: url("../../assets/rain_sky.jpg") no-repeat center center /
+      cover;
+  }
+
+  &.default-background {
+    --background: #f0f0f0;
+  }
+}
+
+ion-title {
+  color: white;
+}
+
+ion-card-title {
+  color: white;
+}
+
+ion-toolbar {
+  --background: black;
+  color: #f0f0f0;
+}
+
+#container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.clear-sky {
+  background-image: url("../../assets/clear_sky.jpg");
+  background-size: cover;
+}
+
+.cloudy-sky {
+  background-image: url("../../assets/cloudy_sky.jpeg");
+  background-size: cover;
+}
+
+.rainy-sky {
+  background-image: url("../../assets/rain_sky.jpg");
+  background-size: cover;
+}
+
+.default-background {
+  background-color: #f0f0f0;
+}
+
+#Pembuat {
+  font-size: 10px;
+  margin-top: 0;
+  padding-top: 10px;
+  margin-left: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.search-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.custom-search {
+  --border-radius: 25px;
+  --background: black;
+  display: flex;
+  align-items: center;
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-end: 0;
+}
+
+.custom-label {
+  flex: 0 0 20%;
+  margin-left: 30px;
+}
+
+.custom-input {
+  flex: 1;
+}
+
+ion-button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+ion-button {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  --color: white;
+  --background: #3880ff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    --background: #1c60ff;
+    --color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+}
+
+ion-card {
+  --background: black;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.custom-list {
+  background-color: transparent;
+}
+
+ion-icon {
+  color: white;
+}
+
+ion-item {
+  --background: #333333;
+}
