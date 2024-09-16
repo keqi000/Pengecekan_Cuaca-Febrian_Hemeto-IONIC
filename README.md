@@ -1,17 +1,23 @@
 # Pengecekan_Cuaca-Febrian_Hemeto-IONIC
+
 Tugas 2 Pengembangan Aplikasi Mobile
 Febrian Rezki Hemeto - 220211060072
 Pengembangan Aplikasi Mobile (A)
 
 repositori ini hanya digunakan untuk repo aplikasi pengecekan cuaca tugas 2
 
+![gif](https://github.com/keqi000/Pengecekan_Cuaca-Febrian_Hemeto-IONIC/blob/main/src/assets/11zon_created-GIF.gif?raw=true)
+
 # Link Aplikasi
+
 https://drive.google.com/drive/folders/1PBG8ZeU7ZtmjN-NBhQuzvZHvHIPan-9P
 
 # Gambaran Umum:
+
 Weather App adalah aplikasi cuaca sederhana namun fungsional yang dibangun menggunakan framework Ionic. Aplikasi ini menggunakan API OpenWeather untuk menampilkan informasi cuaca terkini di kota yang dimasukkan oleh pengguna. Dengan antarmuka yang intuitif, pengguna dapat dengan mudah mencari dan melihat data cuaca seperti suhu, kondisi cuaca, kelembaban, kecepatan angin, dan lainnya. Latar belakang aplikasi ini secara dinamis berubah sesuai dengan kondisi cuaca saat ini (cerah, berawan, atau hujan).
 
 # Fitur:
+
 Cari Cuaca Berdasarkan Kota: Pengguna dapat memasukkan nama kota mana pun untuk mendapatkan data cuaca terkini.
 
 Latar Belakang Dinamis: Latar belakang aplikasi berubah sesuai dengan kondisi cuaca, memberikan pengalaman yang lebih interaktif (langit cerah, berawan, hujan).
@@ -27,6 +33,7 @@ Suhu minimum dan maksimum untuk hari itu
 Penanganan Kesalahan: Menampilkan pesan kesalahan jika nama kota tidak valid atau data cuaca tidak tersedia.
 
 # Cara Penggunaan:
+
 Masukkan nama kota di kolom input yang diberi label "Enter City."
 
 Klik tombol "Search" untuk mendapatkan cuaca terkini di kota yang dimasukkan.
